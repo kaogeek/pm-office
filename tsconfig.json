@@ -3,7 +3,10 @@
   "compilerOptions": {
     "forceConsistentCasingInFileNames": false,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      // each packlet we will assign to new alias
+      "$app/*": ["src/packlets/app/*"]
+    }
   },
   "include": ["src"]
 }
