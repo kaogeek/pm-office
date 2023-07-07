@@ -1,0 +1,41 @@
+---
+import SearchIcon from './searchIcon.astro'
+---
+
+<header>
+  <section class="flex h-20 items-center justify-between px-32">
+    <div class="flex items-center space-x-4">
+      <span class="h-12 w-12 rounded-full bg-gray-500"></span>
+      <p>สำนักนายกรัฐมนตรี<br />แห่งประเทศไทย_</p>
+    </div>
+    <div class="w-full max-w-sm">
+      <div class="relative h-8 w-full">
+        <div
+          class="pointer-events-none absolute inset-y-0 left-0 flex h-8 w-8 items-center p-1"
+        >
+          <SearchIcon class="h-full w-full" />
+        </div>
+        <input
+          type="text"
+          name="search"
+          class="h-full w-full border-b border-[#525252] bg-[#f4f4f4] pl-8 font-sans placeholder-[#a8a8a8]"
+          placeholder="ค้นหาจากข้อความ"
+        />
+      </div>
+    </div>
+  </section>
+  <nav class="flex h-14 justify-between bg-[#0f3288] px-32 text-white">
+    <div class="flex items-center space-x-8">
+      <a>หน้าแรก</a>
+      <a>ความเคลื่อนไหว</a>
+      <a>บริการของรัฐ</a>
+      <a>นโยบาย/ผลงาน</a>
+      <a>เกี่ยวกับนายก</a>
+      <a>ติดต่อสำนักนายก</a>
+      <a>Media</a>
+    </div>
+    <div>
+      <!-- socials -->
+    </div>
+  </nav>
+</header>

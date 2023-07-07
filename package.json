@@ -13,6 +13,8 @@
   "devDependencies": {
     "@astrojs/node": "^5.3.0",
     "@astrojs/tailwind": "^4.0.0",
+    "@fontsource-variable/anuphan": "^5.0.4",
+    "@fontsource/ibm-plex-serif": "^5.0.4",
     "astro": "^2.8.0",
     "astro-seo": "^0.7.4",
     "prettier": "2.8.8",

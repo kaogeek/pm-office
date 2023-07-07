@@ -1,7 +1,9 @@
 ---
 import SEO from './seo.astro'
+import Header from './header.astro'
 
-import '../styles/tailwind.css'
+import '@fontsource-variable/anuphan'
+import '@fontsource/ibm-plex-serif'
 ---
 
 <!DOCTYPE html>
@@ -20,7 +22,8 @@ import '../styles/tailwind.css'
     </slot>
   </head>
   <body>
-    <main class="mx-auto max-w-7xl">
+    <Header />
+    <main>
       <slot />
     </main>
   </body>

@@ -11,6 +11,12 @@ devDependencies:
   '@astrojs/tailwind':
     specifier: ^4.0.0
     version: 4.0.0(astro@2.8.0)(tailwindcss@3.3.2)
+  '@fontsource-variable/anuphan':
+    specifier: ^5.0.4
+    version: 5.0.4
+  '@fontsource/ibm-plex-serif':
+    specifier: ^5.0.4
+    version: 5.0.4
   astro:
     specifier: ^2.8.0
     version: 2.8.0
@@ -797,6 +803,14 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /@fontsource-variable/anuphan@5.0.4:
+    resolution: {integrity: sha512-ejbc4GCRae+A8JqJT3GM8X+ZJtx2F5ciX2TiQHF7qb0ezaWBxPStbfyBvkLhsOrgQj/IBjixWMM9gmQq+8ep2w==}
+    dev: true
+
+  /@fontsource/ibm-plex-serif@5.0.4:
+    resolution: {integrity: sha512-tVToK6r3dOd9lIt3ZS2m8ixwNJNcsFHHZlI8OSQTfLICKnZP0PYJZhaW46MjRexaRFtBG7/nF8diKaMKhN8tqQ==}
+    dev: true
 
   /@jridgewell/gen-mapping@0.3.3:
     resolution: {integrity: sha512-HLhSWOLRi875zjjMG/r+Nv0oCW8umGb0BgEhyX3dDX3egwZtB8PqLnjz3yedt8R5StBrzcg4aBpnh8UA9D1BoQ==}
