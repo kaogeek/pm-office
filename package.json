@@ -2,7 +2,15 @@
   "name": "pm-office",
   "type": "module",
   "version": "0.0.1",
+  "private": true,
+  "packageManager": "pnpm@8.6.6",
+  "lint-staged": {
+    "*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}": [
+      "prettier --write"
+    ]
+  },
   "scripts": {
+    "prepare": "test -d node_modules/husky && husky install || echo \"husky is not installed\"",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
@@ -17,6 +25,8 @@
     "@fontsource/ibm-plex-serif": "^5.0.4",
     "astro": "^2.8.0",
     "astro-seo": "^0.7.4",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
     "prettier": "2.8.8",
     "prettier-plugin-astro": "^0.10.0",
     "prettier-plugin-tailwindcss": "^0.3.0",
