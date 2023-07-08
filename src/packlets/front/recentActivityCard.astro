@@ -1,0 +1,23 @@
+---
+import { dayjs } from '$app/dayjs'
+
+export interface Props {
+  title: string
+  date: Date
+}
+
+const { title, date } = Astro.props
+---
+
+<article class="w-64 shrink-0 snap-center space-y-2">
+  <div class="aspect-[3/2] bg-gray-500"></div>
+  <h3 class="text-lg font-medium">{title}</h3>
+  <dl class="border-l-[3px] border-warning pl-3">
+    <dt class="sr-only">เผยแพร่เมื่อ</dt>
+    <dd class="font-medium">
+      <time datetime={dayjs(date).format('YYYY-MM-DD')}
+        >{dayjs(date).format('D MMMM BBBB')}</time
+      >
+    </dd>
+  </dl>
+</article>

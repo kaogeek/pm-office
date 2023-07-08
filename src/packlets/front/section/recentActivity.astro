@@ -1,0 +1,14 @@
+---
+import RecentActivityCard from '../recentActivityCard.astro'
+
+import { getRecentActivities } from '../getRecentActivities'
+
+const recentActivities = await getRecentActivities()
+---
+
+<section class="px-32 py-24">
+  <h2 class="text-xl font-medium">ความเคลื่อนไหวล่าสุด</h2>
+  <div class="no-scrollbar flex snap-x gap-6 overflow-x-auto py-6">
+    {recentActivities.map(activity => <RecentActivityCard {...activity} />)}
+  </div>
+</section>

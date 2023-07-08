@@ -5,6 +5,7 @@ import SEO from '$app/seo.astro'
 import Blank from '$layout/blank.astro'
 import ArrowRightIcon from '$icons/arrowRightIcon.astro'
 import NewsArticle from '$front/newsArticle.astro'
+import RecentActivity from '$front/section/recentActivity.astro'
 
 import heroImage from '$assets/hero.jpg'
 
@@ -83,5 +84,6 @@ const foo = await new Promise(r => setTimeout(() => r('bar'), 500))
       </div>
     </div>
   </section>
+  <RecentActivity />
   <h1 class="text-4xl font-bold">{foo}</h1>
 </Blank>
