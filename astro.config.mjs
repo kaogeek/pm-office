@@ -10,4 +10,7 @@ export default defineConfig({
     mode: 'standalone',
   }),
   integrations: [tailwind()],
+  experimental: {
+    assets: true
+  },
 })

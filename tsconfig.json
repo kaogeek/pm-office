@@ -5,7 +5,8 @@
     "baseUrl": ".",
     "paths": {
       // each packlet we will assign to new alias
-      "$app/*": ["src/packlets/app/*"]
+      "$*": ["src/packlets/*"],
+      "$assets/*": ["public/assets/*"]
     }
   },
   "include": ["src"]

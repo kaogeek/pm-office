@@ -1,0 +1,29 @@
+---
+import ArrowRightIcon from '$icons/arrowRightIcon.astro'
+
+import { dayjs } from '$app/dayjs'
+
+export interface Props {
+  title: string
+  date: Date
+}
+
+const { title, date } = Astro.props
+---
+
+<article class="py-6">
+  <h3 class="text-xl font-medium">{title}</h3>
+  <div
+    class="mt-3 flex justify-between border-l-[3px] border-warning pl-3 text-sm"
+  >
+    <dl>
+      <dt class="sr-only">เผยแพร่เมื่อ</dt>
+      <dd class="font-medium">
+        <time datetime={dayjs(date).format('YYYY-MM-DD')}
+          >{dayjs(date).format('D MMMM BBBB')}</time
+        >
+      </dd>
+    </dl>
+    <ArrowRightIcon class="h-6 w-6 text-disabled" />
+  </div>
+</article>

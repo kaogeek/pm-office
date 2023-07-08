@@ -1,17 +1,23 @@
 ---
-import SEO from '$app/components/seo.astro'
-import Blank from '$app/components/blank.astro'
+import { Image } from 'astro:assets'
+
+import SEO from '$app/seo.astro'
+import Blank from '$layout/blank.astro'
+import ArrowRightIcon from '$icons/arrowRightIcon.astro'
+import NewsArticle from '$front/newsArticle.astro'
+
+import heroImage from '$assets/hero.jpg'
 
 // imagine this async as fetching data from Wordpress
 const foo = await new Promise(r => setTimeout(() => r('bar'), 500))
 ---
 
 <Blank>
-  <SEO title="Home" />
+  <SEO slot="seo" title="Home" />
   <section
     class="relative grid min-h-[24rem] grid-cols-2 items-center overflow-hidden bg-[#030308] px-32 py-16 text-white"
   >
-    <div class="col-span-1 space-y-4">
+    <div class="z-10 col-span-1 space-y-4">
       <h1 class="font-serif text-4xl">
         Welcome to official website of the Prime Minister's Office of Thailand_
       </h1>
@@ -20,84 +26,59 @@ const foo = await new Promise(r => setTimeout(() => r('bar'), 500))
         ไม่ใช่นักการเมืองหน้าเก่าในขวดใหม่ และไม่ใช่ลูกของนักการเมืองรุ่นเก๋า —
         คนธรรมดาคนไหนก็เป็น ส.ส. แทนเราได้
       </p>
-      <button class="bg-[#0f62fe] px-5 py-2">อ่านเพิ่มเติม</button>
+      <div class="pt-8">
+        <button class="inline-flex items-center bg-[#0f62fe] px-5 py-2"
+          >อ่านเพิ่มเติม<ArrowRightIcon class="ml-2 w-6 text-white" /></button
+        >
+      </div>
     </div>
-    <div class="absolute bottom-0 right-0">
-      <img src="/mr-pita.png" class="h-full w-auto" />
+    <div class="absolute bottom-0 right-32 top-0">
+      <Image src={heroImage} alt="pita" class="h-full w-auto max-w-none" />
     </div>
   </section>
   <section class="px-32 py-24">
     <h2 class="text-xl font-medium">
-      <span
-        class="underline-3 underline decoration-[#f1c21b] underline-offset-2"
+      <span class="underline-3 underline decoration-warning underline-offset-2"
         >ไฮไลท์</span
       ><span>ความเคลื่อนไหวของนายกฯ</span>
     </h2>
-    <div class="grid grid-cols-8 gap-8 py-6">
-      <div class="col-span-5 aspect-[4/3] bg-green-50">
+    <div class="grid aspect-[2/1] grid-cols-8 gap-8 py-6">
+      <div class="col-span-5 bg-green-50">
         <h3>
           ถอดรหัสเกมการเมืองสำหรับนายกฯคนต่อไป
           พรรคก้าวไกลพร้อมเข้าสู่อำนาจบริหาร?
         </h3>
       </div>
-      <div class="col-span-3 h-fit overflow-hidden bg-white p-6">
+      <div class="relative col-span-3 h-full overflow-hidden bg-white p-6">
         <span
-          class="border-2 border-[#e0e0e0] px-3 py-1 text-sm font-semibold text-[#525252]"
+          class="border-2 border-[#e0e0e0] px-3 py-1 text-sm font-semibold text-secondary"
           >#ข่าวนายกฯ</span
         >
-        <div class="divide-y">
-          <article class="py-6">
-            <h3 class="text-xl font-medium">
-              ติดตามนโยบาย เปิดประตูสู่รัฐธรรมนูญฉบับใหม่ที่ร่างโดยประชาชน
-            </h3>
-            <div class="mt-3 flex border-l-[3px] border-[#f1c21b] pl-3 text-sm">
-              <dl>
-                <dt class="sr-only">เผยแพร่เมื่อ</dt>
-                <dd class="font-medium">
-                  <time datetime="2023-07-10">10 กรกฏาคม 2566</time>
-                </dd>
-              </dl>
-            </div>
-          </article>
-          <article class="py-6">
-            <h3 class="text-xl font-medium">การประชุมสุดยอด G7</h3>
-            <div class="mt-3 flex border-l-[3px] border-[#f1c21b] pl-3 text-sm">
-              <dl>
-                <dt class="sr-only">เผยแพร่เมื่อ</dt>
-                <dd class="font-medium">
-                  <time datetime="2023-07-07">7 กรกฏาคม 2566</time>
-                </dd>
-              </dl>
-            </div>
-          </article>
-          <article class="py-6">
-            <h3 class="text-xl font-medium">
-              นายกฯ ร่วมทดสอบการเดินรถเสมือน (Trial run)
-              ตลอดสายอย่างเป็นทางการโครงการรถไฟฟ้ามหานครสายสีเหลือง
-            </h3>
-            <div class="mt-3 flex border-l-[3px] border-[#f1c21b] pl-3 text-sm">
-              <dl>
-                <dt class="sr-only">เผยแพร่เมื่อ</dt>
-                <dd class="font-medium">
-                  <time datetime="2023-07-02">2 กรกฏาคม 2566</time>
-                </dd>
-              </dl>
-            </div>
-          </article>
-          <article class="py-6">
-            <h3 class="text-xl font-medium">
-              นายกฯ กล่าวแถลง ESCAP
-              ย้ำไทยพร้อมยกระดับความร่วมมือในการแก้ปัญหาการเปลี่ยนแปลงสภาพภูมิอากาศ
-            </h3>
-            <div class="mt-3 flex border-l-[3px] border-[#f1c21b] pl-3 text-sm">
-              <dl>
-                <dt class="sr-only">เผยแพร่เมื่อ</dt>
-                <dd class="font-medium">
-                  <time datetime="2023-07-01">1 กรกฏาคม 2566</time>
-                </dd>
-              </dl>
-            </div>
-          </article>
+        <div class="divide-y divide-[#c6c6c6]">
+          <NewsArticle
+            title="ติดตามนโยบาย เปิดประตูสู่รัฐธรรมนูญฉบับใหม่ที่ร่างโดยประชาชน"
+            date={new Date('2023-07-10')}
+          />
+          <NewsArticle
+            title="การประชุมสุดยอด G7"
+            date={new Date('2023-07-07')}
+          />
+          <NewsArticle
+            title="นายกฯ ร่วมทดสอบการเดินรถเสมือน (Trial run) ตลอดสายอย่างเป็นทางการโครงการรถไฟฟ้ามหานครสายสีเหลือง"
+            date={new Date('2023-07-02')}
+          />
+          <NewsArticle
+            title="นายกฯ กล่าวแถลง ESCAP ย้ำไทยพร้อมยกระดับความร่วมมือในการแก้ปัญหาการเปลี่ยนแปลงสภาพภูมิอากาศ"
+            date={new Date('2023-07-01')}
+          />
+          <NewsArticle
+            title="นายกฯ กล่าวแถลง ESCAP ย้ำไทยพร้อมยกระดับความร่วมมือในการแก้ปัญหาการเปลี่ยนแปลงสภาพภูมิอากาศ"
+            date={new Date('2023-07-01')}
+          />
+        </div>
+        <div
+          class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-b from-transparent to-white"
+        >
         </div>
       </div>
     </div>
