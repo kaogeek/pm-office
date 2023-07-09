@@ -1,0 +1,29 @@
+---
+import { Image } from 'astro:assets'
+import ArrowRightIcon from '$icons/arrowRightIcon.astro'
+
+import heroImage from '$assets/hero.jpg'
+---
+
+<section
+  class="relative grid min-h-[32rem] grid-cols-2 items-center overflow-hidden bg-[#030308] px-32 py-16 text-white"
+>
+  <div class="z-10 col-span-1 space-y-4">
+    <h1 class="font-serif text-4xl">
+      Welcome to official website of the Prime Minister's Office of Thailand_
+    </h1>
+    <p>
+      ผู้สมัครรับเลือกตั้งของเรา เป็นนักการเมืองเลือดใหม่
+      ไม่ใช่นักการเมืองหน้าเก่าในขวดใหม่ และไม่ใช่ลูกของนักการเมืองรุ่นเก๋า —
+      คนธรรมดาคนไหนก็เป็น ส.ส. แทนเราได้
+    </p>
+    <div class="pt-8">
+      <button class="inline-flex items-center bg-[#0f62fe] px-5 py-2"
+        >อ่านเพิ่มเติม<ArrowRightIcon class="ml-2 w-6 text-white" /></button
+      >
+    </div>
+  </div>
+  <div class="absolute bottom-0 right-32 top-0">
+    <Image src={heroImage} alt="pita" class="h-full w-auto max-w-none" />
+  </div>
+</section>

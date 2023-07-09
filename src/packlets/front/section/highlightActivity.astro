@@ -1,0 +1,47 @@
+---
+import NewsArticle from '$front/newsArticle.astro'
+---
+
+<section class="px-32 py-24">
+  <h2 class="text-xl font-medium">
+    <span class="underline-3 underline decoration-warning underline-offset-2"
+      >ไฮไลท์</span
+    ><span>ความเคลื่อนไหวของนายกฯ</span>
+  </h2>
+  <div class="grid aspect-[2/1] grid-cols-8 gap-8 py-6">
+    <div class="col-span-5 bg-green-50">
+      <h3>
+        ถอดรหัสเกมการเมืองสำหรับนายกฯคนต่อไป พรรคก้าวไกลพร้อมเข้าสู่อำนาจบริหาร?
+      </h3>
+    </div>
+    <div class="relative col-span-3 h-full overflow-hidden bg-white p-6">
+      <span
+        class="border-2 border-[#e0e0e0] px-3 py-1 text-sm font-semibold text-secondary"
+        >#ข่าวนายกฯ</span
+      >
+      <div class="divide-y divide-[#c6c6c6]">
+        <NewsArticle
+          title="ติดตามนโยบาย เปิดประตูสู่รัฐธรรมนูญฉบับใหม่ที่ร่างโดยประชาชน"
+          date={new Date('2023-07-10')}
+        />
+        <NewsArticle title="การประชุมสุดยอด G7" date={new Date('2023-07-07')} />
+        <NewsArticle
+          title="นายกฯ ร่วมทดสอบการเดินรถเสมือน (Trial run) ตลอดสายอย่างเป็นทางการโครงการรถไฟฟ้ามหานครสายสีเหลือง"
+          date={new Date('2023-07-02')}
+        />
+        <NewsArticle
+          title="นายกฯ กล่าวแถลง ESCAP ย้ำไทยพร้อมยกระดับความร่วมมือในการแก้ปัญหาการเปลี่ยนแปลงสภาพภูมิอากาศ"
+          date={new Date('2023-07-01')}
+        />
+        <NewsArticle
+          title="นายกฯ กล่าวแถลง ESCAP ย้ำไทยพร้อมยกระดับความร่วมมือในการแก้ปัญหาการเปลี่ยนแปลงสภาพภูมิอากาศ"
+          date={new Date('2023-07-01')}
+        />
+      </div>
+      <div
+        class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-b from-transparent to-white"
+      >
+      </div>
+    </div>
+  </div>
+</section>

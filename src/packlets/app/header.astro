@@ -1,5 +1,8 @@
 ---
+import { Image } from 'astro:assets'
 import SearchIcon from '$icons/searchIcon.astro'
+
+import logoImage from '$assets/logo.png'
 ---
 
 <header>
@@ -7,7 +10,11 @@ import SearchIcon from '$icons/searchIcon.astro'
     class="grid h-20 grid-cols-4 items-center justify-between bg-white px-32"
   >
     <div class="col-span-3 flex items-center space-x-4">
-      <span class="h-12 w-12 rounded-full bg-gray-500"></span>
+      <Image
+        src={logoImage}
+        alt="logo"
+        class="h-12 w-12 shrink-0 rounded-full"
+      />
       <p>สำนักนายกรัฐมนตรี<br />แห่งประเทศไทย_</p>
     </div>
     <div class="col-span-1">
